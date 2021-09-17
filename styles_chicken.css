@@ -1,0 +1,24 @@
+h1{
+    background-color: rgb(238, 212, 62);
+}
+
+h2{
+    color:indigo;
+}
+
+h3{
+    color:purple;
+}
+
+h4{
+    color:slateblue;
+}
+
+button{
+    color:black;
+    background-color: goldenrod;
+}
+
+p{
+    background: blanchedalmond;
+}
