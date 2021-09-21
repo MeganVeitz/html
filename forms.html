@@ -1,0 +1,61 @@
+<!--9/21/21, Megan Veitz-->
+<!--The form ele "represents a document section containing interactice controls for submitting info"-->
+<!--The action attribute specifies WHERE the form data should be sent-->
+<!--The method attribute specifies which HTTP method should be used-->
+<!--When you submit a form, a HTTP will be sent, a method controls where you want that to be sent-->
+
+<!--The input ele is used to create a variety of different-->
+<!-- <input> has no closing tag-->
+
+<!--If button is inside <form> it will "submit" the form. If outside, it will do nothing-->
+<!--Name attribute is the name that will be sent to the server-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Demo</title>
+</head>
+
+<body>
+    <h1>Forms Demo</h1>
+    <hr>
+    <form action="/tacos">
+        <!--type="button" Regular button, won't submit-->
+        <button type="button">Please Don't Submit the Form!</button>
+        <p>
+            <label for="username">Enter a Username:</label>
+            <input type="text" placeholder="username" id="username" name="username">
+        </p>
+        <p>
+            <label for="password">Enter a Password:</label>
+            <input type="password" placeholder="password" id="password" name="password">
+        </p>
+        <p>
+            <label for="color">Enter a Color:</label>
+            <input type="color" id="color" name="color">
+        </p>
+        <p>
+            <label for="number">Enter a Number:</label>
+            <input type="number" placeholder="enter a number" id="number" name="num">
+        </p>
+        <p>
+            <label for="time">Enter a Time:</label>
+            <input type="time" id="time" name="time">
+        </p>
+        <!--This button submits the form-->
+        <button>Submit</button>
+
+        <!--So does this one: -->
+        <input type="submit" value="Click me!">
+    </form>
+    <hr>
+    <!--Outside of a form, no default dehavior-->
+    <button>Not Inside Form</button>
+
+</body>
+
+</html>
