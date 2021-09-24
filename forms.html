@@ -39,8 +39,10 @@
             <input type="color" id="color" name="color">
         </p>
         <p>
-            <label for="number">Enter a Number:</label>
-            <input type="number" placeholder="enter a number" id="number" name="num">
+            <!--Alternative way to label an input (less common)-->
+            <label for="number">Enter a Number:
+                <input type="number" placeholder="enter a number" id="number" name="num" min="1" max="1000" step="2">
+            </label>
         </p>
         <p>
             <label for="time">Enter a Time:</label>
@@ -55,6 +57,76 @@
     <hr>
     <!--Outside of a form, no default dehavior-->
     <button>Not Inside Form</button>
+    <h2>Hijacking Searches</h2>
+
+    <!-- Form to search Reddit-->
+    <h3>Search Reddit</h3>
+    <form action="https://www.reddit.com/search">
+        <input type="text" name="q">
+        <button>Search Reddit</button>
+    </form>
+
+    <!-- Form to search Google-->
+    <h3>Search Google</h3>
+    <form action="http://www.google.com/search">
+        <input type="text" name="q">
+        <button>Search Google</button>
+    </form>
+
+    <!-- Form to search Youtube-->
+    <h3>Search Youtube</h3>
+    <form action="https://www.youtube.com/results">
+        <input type="text" name="search_query">
+        <button>Search Youtube</button>
+    </form>
+
+    <h2>More Inputs!</h2>
+    <h3>Checkbox</h3>
+    <forms>
+        <!-- In <input>, "checked" will auto-check the box, delete the "checked" at the end if not desired-->
+        <input type="checkbox" name="agree_tos" id="agree" checked>
+        <label for="agree">I agree to everything</label>
+    </forms>
+    <h3>Radio Button</h3>
+    <form>
+        <p>
+            <label for="xs">XS:</label>
+            <input type="radio" , name="size" id="xs" , value="xs">
+            <label for="s">S:</label>
+            <input type="radio" , name="size" id="s" , value="s">
+            <label for="m">M:</label>
+            <input type="radio" , name="size" id="m" , value="m">
+        </p>
+        <button>Submit Size</button>
+    </form>
+
+    <h3>Select Dropdown menu</h3>
+    <form>
+        <label for="">Please Select an Entree:</label>
+        <select name="meal" id="meal">
+            <option value="">Please select an option</option>
+            <option value="fish">Fish</option>
+            <!--"selected" will automatically select that option-->
+            <option value="veg" selected>Vegetarian</option>
+            <option value="steak">Steak</option>
+        </select>
+        <p>
+        <h3>Range</h3>
+        <label for="cheese">Amount of Cheese:</label>
+        <!--"step" will increasse/decrease by 7, "value" is the start value-->
+        <input type="range" id="cheese" min="1" step="7" max="100" value="75" name="cheese_level">
+        </p>
+        <h3>Text Area</h3>
+        <p>
+            <label for="requests">Any Special Requests?</label>
+            <br>
+            <textarea id="requests" rows="5" cols="40" name="Requests?"
+                placeholder="Type food requests here:"></textarea>
+        </p>
+        <button>Submit Food Options</button>
+    </form>
+
+
 
 </body>
 
