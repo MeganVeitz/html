@@ -126,7 +126,25 @@
         <button>Submit Food Options</button>
     </form>
 
+    <h2>Validations Demo</h2>
+    <form>
+        <label for="first">Enter First Name</label>
+        <input type="text" name="first" id="first" required>
+        <br>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" minlength="5" maxlength="20" required>
+        <br>
 
+        <!-- type="email" only looking for pattern ...@...-->
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+        <br>
+        <!-- type="url" only looking for pattern http//:...-->
+        <label for="url">URL</label>
+        <input type="url" name="url" id="url" required>
+        <br>
+        <button>Submit</button>
+    </form>
 
 </body>
 
