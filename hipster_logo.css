@@ -1,0 +1,13 @@
+/* 10/10/21 Megan Veitz
+ A very hip artisanal vadka company in opening called Purple Grain
+ Create an incredibly ugly logo
+*/
+h1{
+    text-transform: uppercase;
+    font-family: monospace;
+    text-align: center;
+    font-weight: 100;
+    font-size: 40px;
+    letter-spacing: 20px;
+    text-decoration: plum underline wavy;
+}
