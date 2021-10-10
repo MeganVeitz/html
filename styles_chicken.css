@@ -1,22 +1,36 @@
 /* hexadecimal base 16 (16 choices, 1-9 & A=10, B=11, C=12, D=13, D=14, F=15) f=15 in decimal
-ff =255 (#ffff00 = full red, full green, no blue = Yellow)
+- ff =255 (#ffff00 = full red, full green, no blue = Yellow)
+- hex can have a 3 digit color too, #ffeecc == #fec
+- hover over color to change 
 */
 
 h1{
+    text-align: center;
     background-color: rgb(238, 212, 62);
+    text-decoration: black underline;
+    letter-spacing: 5px;
+    font-size: 70px;
+    /*Font choices=First choice, 2nd choice, 3rd, 4th , 5th, ect */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 h2{
     color:indigo;
-    background-color: #66627a;
+    background-color: #918ea1;
+    text-decoration: black;
+    font-size: xx-large;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h3{
     color:purple;
+    font-size: x-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 h4{
     color:slateblue;
+    font-size: larger;
 }
 
 button{
@@ -26,4 +40,10 @@ button{
 
 p{
     background: blanchedalmond;
+    text-align: left;
+    line-height: 1.5;
+}
+/* a{} = hyper links */
+a{
+    text-decoration: none;
 }
