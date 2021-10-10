@@ -1,9 +1,14 @@
+/* hexadecimal base 16 (16 choices, 1-9 & A=10, B=11, C=12, D=13, D=14, F=15) f=15 in decimal
+ff =255 (#ffff00 = full red, full green, no blue = Yellow)
+*/
+
 h1{
     background-color: rgb(238, 212, 62);
 }
 
 h2{
     color:indigo;
+    background-color: #66627a;
 }
 
 h3{
