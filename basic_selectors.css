@@ -1,0 +1,19 @@
+/* 10/12/21 Megan Veitz*/
+
+li{
+    color: blue;
+}
+/* class selector = .____   */
+#done{
+    color: grey;
+}
+
+/* # = id selector */
+.clear{
+    background-color: red;
+    color: white;
+}
+
+h1{
+    background-color: lightgrey;
+}
