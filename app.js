@@ -289,6 +289,8 @@ console.log('Mick2' + personPerson);
 personPerson['first' + 'Name'] // output 'Mick'
 console.log('Mick3' + personPerson);
 
+
+//Object Access Exercise
 //PLEASE DON'T TOUCH THIS LINE!
 const restaurant = {
     name: 'Ichiran Ramen',
@@ -299,7 +301,172 @@ const restaurant = {
 }
 
 //YOUR CODE GOES DOWN HERE:
-console.log(restaurant['address', 'city', 'state', 'zipcode']);
+//console.log(restaurant['address', 'city', 'state', 'zipcode']);
 //restaurant.slice(1, 4)
+//const fullAddress = (({ address, city, state, zipcode }) => ({ address, city, state, zipcode }))(restaurant);
+const fullAddress = restaurant['address'].concat([' ']).concat(restaurant['city']).concat([' ']).concat(restaurant['state']).concat([' ']).concat(restaurant['zipcode'])
 
-console.log(restaurant.address);
+const midterms = { Dan: 98, Tom: 79 }
+//updated dot notation
+midterms.Tom = 80 //now returns {Dan: 98, Tom: 80}
+// updating to letter grades instead of percentage
+midterms.Tom = "B-"
+
+//updated with square brackets 
+midterms.Dan = "A+" // now returns {Dan: 'A+', Tom: 'B-'}
+
+//add to your object
+midterms.ezra = "B+"
+midterms['Andy'] = "C"
+// Now outputs {Dan: 'A+', Tom: 'B-', ezra: 'B+', Andy: 'C'}
+
+
+//NESTING ARRAYS AND OBJECTS
+// array that has objects
+const comments = [
+    { username: 'Tammy', text: 'lolololol', votes: 9 },
+    { username: 'Kyle', text: 'hahahaha', votes: 15 }
+]
+// how to access text from kyle
+comments[1].text
+// object that has an array
+const comments2 = {
+    name: 'FishBoi',
+    inStock: true,
+    price: 99.99,
+    flavors: ['grape', 'apple', 'cherry']
+};
+
+
+// FOR LOOPS (start, end, increment value)
+// First excersise, print out string 6 times, no more, no less.
+for (let num = 1; num <= 6; num++) {
+    console.log("Da ba dee da ba daa");
+}
+
+//Printing out odd numbers only
+for (let i = 1; i < 21; i += 2) {
+    console.log(i);
+}
+
+//Printing out even numbers only
+for (let i = 0; i < 21; i += 2) {
+    console.log(i);
+}
+
+//Counting down by tens
+for (let i = 100; i >= 0; i -= 10) {
+    console.log(i);
+}
+
+//Multiplying by ten till we get to 1,000
+for (let i = 10; i <= 1000; i *= 10) {
+    console.log(i);
+}
+
+// Write a loop that prints:
+// 25
+// 20
+// 15
+// 10
+// 5
+// 0
+for (let j = 25; j >= 0; j -= 5) {
+    console.log(j)
+}
+
+//LOOPING OVER ARRAYS
+const animal = ['lions', 'tigers', 'bears'];
+// Beginning to end of array
+for (let i = 0; i < animal.length; i++) {
+    console.log(i, animal[i]);
+}
+//output:
+//0 'lions'
+//1 'tigers'
+//2 'bears'
+
+// End to beginning of array
+for (let i = animal.length - 1; i >= 0; i--) {
+    console.log(animal[i]);
+}
+
+//Iterating Arrays Exercise
+// print out each name in uppercase letters
+const people = ["Scooby", "Velma", "Daphne", "Shaggy", "Fred"];
+
+for (let i = 0; i < people.length; i++) {
+    console.log(people[i].toUpperCase());
+}
+/*Outputs:
+SCOOBY
+app.js:399 VELMA
+app.js:399 DAPHNE
+app.js:399 SHAGGY
+app.js:399 FRED
+*/
+
+
+// NESTED FOR LOOPS
+for (let i = 1; i <= 10; i++) {
+    console.log(`i is: ${i}`);
+    for (let j = 1; j < 4; j++) {
+        console.log(`     j is: ${j}`);
+    }
+}
+
+//NESTED ARRAYS
+const seatingChart = [
+    ['Kristen', 'Erik', 'Namita'],
+    ['Geoffry', 'Juanita', 'Antonio', 'Kevin'],
+    ['Yuma', 'Sakura', 'Jack', 'Erika']
+]
+
+for (let i = 0; i < seatingChart.length; i++) {
+    //console.log(seatingChart[i]);
+    const row = seatingChart[i];
+    console.log(`ROW #${i + 1}`)
+    for (let j = 0; j < row.length; j++) {
+        console.log(row[j])
+    }
+}
+
+//WHILE LOOP ~ single contition, great for human input (unknown input)
+let count = 0;
+while (count < 10) {
+    count++;
+    console.log(count);
+}
+
+
+const SECRET = "BabyHippo";
+let guess = prompt("Enter the secret code...");
+while (guess !== SECRET) {
+    guess = prompt("Enter the secret code...")
+}
+console.log("CONGRATS you got the secret!!!")
+
+//BREAK; Keyword
+let targetNum = Math.floor(Math.random() * 10);
+//let guess = Math.floor(Math.random() * 10);
+
+while (true) {
+    guess = Math.floor(Math.random() * 10);
+    if (guess === targetNum) {
+        console.log(`CORRECT! Guessed: ${guess} & target was: ${targetNum}`);
+        break;
+    } else {
+        console.log(`NOPE! Guessed: ${guess} & target was: ${targetNum}`);
+    }
+}
+
+// Game to mimc user input
+let input = prompt("Type something here")
+
+while (true) {
+    input = prompt(input);
+    if (input === "Stop copying me") {
+        break;
+    }
+}
+console.log("Ok You Win!")
