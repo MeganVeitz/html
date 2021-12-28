@@ -1,7 +1,7 @@
 <!--September 12, 2021-->
 <!--Remaking a wikipedia page about chickens using html-->
 <!--Calling this "new" wikipedia page: Megapedia-->
-<!-- Last updated: 9/20/21 -->
+<!-- Last updated: 12/28/21 -->
 <!DOCTYPE html>
 
 <html>
@@ -14,7 +14,8 @@
 <body>
     <main>
         <h1>Chicken</h1>
-        <hr>
+        <p> Navaigation: </p>
+        <!-- <hr> -->
         <!-- <hr> Makes a line -->
         <nav>
             <ul>
@@ -27,7 +28,7 @@
         <!--Alt attribute will be read by screen reader-->
         <div>
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Male_and_female_chicken_sitting_together.jpg/440px-Male_and_female_chicken_sitting_together.jpg"
-                alt="Chicken Image on Wikipedia">
+                alt="Chicken Image on Megapedia">
         </div>
         <p>
             The <b>chicken</b> (Gallus gallus domesticus) is a <a
@@ -230,12 +231,21 @@
         <h3>Broodiness</h3>
     </main>
     <footer>
+        <nav>
+            <ul>
+                <!-- Nav semantics doesn't go anywhere, Yet..-->
+                <li><a href="home">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="contact">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="license">Content available under these licenses. (coming soon)</a>
         <p> This is a megapedia site!</p>
         <date> September 20, 2021</date>
         <ul>
             <!-- These links don't work, Yet..-->
-            <li> <a href="asd">Contact</a></li>
-            <li> <a href="asd">Help</a></li>
+            <li id="contact"> <a href="asd">Contact</a></li>
+            <li class="help"> <a href="asd">Help</a></li>
         </ul>
     </footer>
 </body>
